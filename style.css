@@ -166,10 +166,24 @@ header h1 {
     font-weight: bold;     
     text-transform: none;  /* Asegura que se mantenga en minúsculas */
 }
-/* Ajuste para que en celulares no se vea tan gigante */
+/* --- Ajustes para CELULARES --- */
 @media (max-width: 600px) {
+    header {
+        padding: 15px 0; 
+    }
+    .header-content {
+        flex-direction: column; 
+        gap: 5px; /* Muy poco espacio entre logo y texto */
+    }
+    .logo-img {
+        height: 60px;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
     .slogan {
         font-size: 1.1rem;
+        margin: -8px 0 5px 0; /* Sube el slogan y acerca programas técnicos */
     }
     .tipo-programas {
         font-size: 0.9rem;
