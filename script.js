@@ -40,7 +40,7 @@ function buildCards(data) {
             <button class="btn-whatsapp" onclick="handleContact('${prog.nombre}', ${prog.id})" 
                 style="font-size: 1.1rem; font-weight: bold; display: flex; align-items: center; justify-content: center; width: 100%; margin-top: 15px;">
                 <i class="fab fa-whatsapp" style="margin-right: 10px; font-size: 1.4rem;"></i>
-                Consultar por WhatsApp
+                Consulta por WhatsApp
             </button>
         </article>
     `).join('');
@@ -81,5 +81,6 @@ function handleContact(name, id) {
     const num = "573052495483"; 
     window.open(`https://wa.me/${num}?text=Hola, me interesa ${name} en el horario ${h}`);
 }
+
 
 document.addEventListener('DOMContentLoaded', () => buildCards(programas));
