@@ -166,31 +166,40 @@ header h1 {
     font-weight: bold;     
     text-transform: none;  /* Asegura que se mantenga en minúsculas */
 }
-/* --- Ajustes para CELULARES (pantallas de 600px o menos) --- */
+/* --- Ajustes para CELULARES (Logo redondo y pequeño) --- */
 @media (max-width: 600px) {
-    header {
-        padding: 15px 0; /* Encabezado más delgado */
-    }
-
     .header-content {
-        flex-direction: column; /* Logo arriba, texto abajo */
-        gap: 8px;              /* Menos espacio entre logo y texto */
+        flex-direction: column; /* Logo arriba, letras abajo */
+        gap: 5px;               /* Muy poco espacio entre logo y letras */
     }
 
     .logo-img {
-        height: 60px;          /* Logo más pequeño en móvil */
+        /* Reducimos el tamaño (30% menos que antes) */
+        height: 55px; 
+        width: 55px;            /* Definimos ancho igual al alto para que sea círculo */
+        
+        /* Lo hacemos totalmente redondo */
+        border-radius: 50%;     
+        object-fit: cover;      /* Asegura que la imagen llene el círculo sin estirarse */
+        
+        border: 2px solid #2ecc71; /* Opcional: un borde verde para que resalte */
+        margin-bottom: 2px;
     }
 
     header h1 {
-        font-size: 1.5rem;     /* Título más compacto */
+        font-size: 1.6rem;
+        margin: 0;
     }
 
     .slogan {
-        font-size: 1.1rem;     /* Slogan un poco más pequeño */
-        margin: -5px 0 8px 0;  /* Subimos el slogan y reducimos el espacio de abajo */
+        font-size: 1.1rem;
+        /* Seguimos pegando el slogan al título y alejándolo de abajo */
+        margin: -5px 0 10px 0; 
     }
 
     .tipo-programas {
-        font-size: 0.9rem;     /* Frase final más pequeña */
+        font-size: 0.95rem;
+        font-weight: bold;
     }
 }
+
