@@ -166,41 +166,31 @@ header h1 {
     font-weight: bold;     
     text-transform: none;  /* Asegura que se mantenga en minúsculas */
 }
-/* --- Ajustes para CELULARES (Logo y texto en la misma línea) --- */
+/* --- Ajustes para CELULARES (pantallas de 600px o menos) --- */
 @media (max-width: 600px) {
     header {
-        padding: 10px 0;
+        padding: 15px 0; /* Encabezado más delgado */
     }
 
     .header-content {
-        flex-direction: row;    /* Mantiene logo y texto uno al lado del otro */
-        justify-content: center; /* Centra el conjunto en la pantalla */
-        gap: 10px;               /* Espacio pequeño entre logo y texto */
-        padding: 0 10px;
+        flex-direction: column; /* Logo arriba, texto abajo */
+        gap: 8px;              /* Menos espacio entre logo y texto */
     }
 
     .logo-img {
-        height: 50px;           /* Logo más pequeño para que quepa al lado */
-        width: auto;
-    }
-
-    .header-texts {
-        align-items: flex-start; /* Alinea los textos a la izquierda del bloque */
-        text-align: left;        /* Texto alineado a la izquierda para que pegue al logo */
+        height: 60px;          /* Logo más pequeño en móvil */
     }
 
     header h1 {
-        font-size: 1.2rem;      /* Título más pequeño para que no se amontone */
-        line-height: 1;
+        font-size: 1.5rem;     /* Título más compacto */
     }
 
     .slogan {
-        font-size: 0.9rem;      /* Slogan más compacto */
-        margin: 2px 0 2px 0;    /* Espacio mínimo arriba y abajo */
+        font-size: 1.1rem;     /* Slogan un poco más pequeño */
+        margin: -5px 0 8px 0;  /* Subimos el slogan y reducimos el espacio de abajo */
     }
 
     .tipo-programas {
-        font-size: 0.75rem;     /* Frase final pequeña */
-        margin: 0;
+        font-size: 0.9rem;     /* Frase final más pequeña */
     }
 }
