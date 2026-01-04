@@ -163,39 +163,40 @@ header h1 {
     text-transform: none;  
 }
 
+/* --- Ajustes para CELULARES --- */
 @media (max-width: 600px) {
     .header-content {
-        flex-direction: column; 
-        gap: 5px;               
+        flex-direction: column;
+        gap: 5px;
     }
 
     .logo-img {
-      
         height: 55px; 
-        width: 55px;            
-        
-        
+        width: 55px;
         border-radius: 50%;     
-        object-fit: cover;      
-        
-        border: 2px solid #2ecc71; 
-        margin-bottom: 2px;
+        object-fit: cover;
+        border: 2px solid #2ecc71;
     }
 
     header h1 {
         font-size: 1.6rem;
-        margin: 0;
     }
 
     .slogan {
         font-size: 1.1rem;
-        margin: -5px 0 10px 0; 
+        /* Cambiamos el 10px por 5px para SUBIR la frase de abajo */
+        margin: -5px 0 5px 0; 
     }
 
     .tipo-programas {
         font-size: 0.95rem;
         font-weight: bold;
     }
-}
 
+    /* --- REDUCIR CUOTAS INICIALES 20% --- */
+    .cuota-inicial, .precio { 
+        font-size: 0.8rem !important; /* Ajusta el nombre de la clase según uses en tu HTML */
+        opacity: 0.9;
+    }
+}
 
