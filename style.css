@@ -169,34 +169,23 @@ header h1 {
 /* --- Ajustes para CELULARES --- */
 @media (max-width: 600px) {
     header {
-        padding: 10px 0; /* Reducimos el grosor del header */
+        padding: 15px 0; 
     }
-
     .header-content {
         flex-direction: column; 
-        gap: 0px;        /* ELIMINAMOS el espacio entre logo y texto */
-        padding: 0;
+        gap: 5px; /* Muy poco espacio entre logo y texto */
     }
-
     .logo-img {
-        height: 65px;    /* Tamaño del logo */
-        margin-bottom: -5px; /* TRUCO: Margen negativo para pegarlo al título */
-        width: auto;
+        height: 60px;
     }
-
     header h1 {
-        font-size: 1.6rem;
-        margin-top: 0;   /* Quitamos espacio arriba del título */
-        line-height: 1;
+        font-size: 1.5rem;
     }
-
     .slogan {
         font-size: 1.1rem;
-        margin: -4px 0 5px 0; /* Mantiene el slogan cerca del título */
+        margin: -8px 0 5px 0; /* Sube el slogan y acerca programas técnicos */
     }
-
     .tipo-programas {
         font-size: 0.9rem;
-        margin-top: 2px;
     }
 }
