@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;900&display=swap');
 
 :root {
-    --primary-brand: #1e293b;    /* Azul Oxford Elegante */
+    --primary-brand: #1e293b;    
     --whatsapp-green: #25D366; 
     --bg-main: #f1f5f9;    
     --card-bg: #ffffff;
-    --text-main: #334155;  
+    --text-main: #192c46;  
     --text-muted: #64748b; 
     --contado-color: #94a3b8; 
     --border-color: #e2e8f0;
@@ -108,3 +108,70 @@ input, select {
 }
 
 @media (max-width: 600px) { .control-panel { grid-template-columns: 1fr; } }
+header {
+    background-color: #15273a;
+    color: white;
+    padding: 30px 0; /* Controla la altura total del encabezado */
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;       /* Alinea verticalmente logo y texto */
+    justify-content: center;   /* Centra todo el grupo en la pantalla */
+    gap: 30px;                 /* Espacio de separación entre logo y nombre */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-img {
+    height: 90px;      /* El alto que ya definimos */
+    width: 90px;       /* IMPORTANTE: Para que sea un círculo perfecto, ancho y alto deben ser IGUALES */
+    object-fit: cover; /* Esto evita que el logo se estire si la imagen original es rectangular */
+    border-radius: 50%; /* Esto es lo que hace el recorte redondo */
+    display: block;
+}
+.header-texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Mantiene todo centrado verticalmente */
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    line-height: 1;
+    /* --- AQUÍ CAMBIAMOS EL COLOR --- */
+    color: #2ecc71; /* Este es un verde llamativo y profesional */
+    font-weight: 800; /* Lo hace un poco más grueso para que resalte más */
+}
+
+.slogan {
+    /* Bajamos un poco el slogan: cambiamos -8px por -3px para que no esté tan pegado al título */
+    /* Mantenemos los 15px abajo para que siga lejos de 'programas técnicos' */
+    margin: -3px 0 15px 0; 
+    font-size: 1.4rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.tipo-programas {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #ffffff;
+    opacity: 1;            /* Subimos la opacidad para que se vea más fuerte */
+    /* --- AQUÍ PONEMOS LA NEGRITA --- */
+    font-weight: bold;     
+    text-transform: none;  /* Asegura que se mantenga en minúsculas */
+}
+/* Ajuste para que en celulares no se vea tan gigante */
+@media (max-width: 600px) {
+    .slogan {
+        font-size: 1.1rem;
+    }
+    .tipo-programas {
+        font-size: 0.9rem;
+    }
+}
