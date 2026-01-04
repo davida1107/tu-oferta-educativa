@@ -111,31 +111,31 @@ input, select {
 header {
     background-color: #15273a;
     color: white;
-    padding: 30px 0; /* Controla la altura total del encabezado */
+    padding: 30px 0; 
     width: 100%;
 }
 
 .header-content {
     display: flex;
-    align-items: center;       /* Alinea verticalmente logo y texto */
-    justify-content: center;   /* Centra todo el grupo en la pantalla */
-    gap: 30px;                 /* Espacio de separación entre logo y nombre */
+    align-items: center;      
+    justify-content: center;   
+    gap: 30px;                 
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .logo-img {
-    height: 90px;      /* El alto que ya definimos */
-    width: 90px;       /* IMPORTANTE: Para que sea un círculo perfecto, ancho y alto deben ser IGUALES */
-    object-fit: cover; /* Esto evita que el logo se estire si la imagen original es rectangular */
-    border-radius: 50%; /* Esto es lo que hace el recorte redondo */
+    height: 90px;      
+    width: 90px;       
+    object-fit: cover; 
+    border-radius: 50%; 
     display: block;
 }
 .header-texts {
     display: flex;
     flex-direction: column;
-    align-items: center;    /* Mantiene todo centrado verticalmente */
+    align-items: center;   
     text-align: center;
 }
 
@@ -143,14 +143,11 @@ header h1 {
     margin: 0;
     font-size: 2.2rem;
     line-height: 1;
-    /* --- AQUÍ CAMBIAMOS EL COLOR --- */
-    color: #2ecc71; /* Este es un verde llamativo y profesional */
-    font-weight: 800; /* Lo hace un poco más grueso para que resalte más */
+    color: #2ecc71; 
+    font-weight: 800; 
 }
 
 .slogan {
-    /* Bajamos un poco el slogan: cambiamos -8px por -3px para que no esté tan pegado al título */
-    /* Mantenemos los 15px abajo para que siga lejos de 'programas técnicos' */
     margin: -3px 0 15px 0; 
     font-size: 1.4rem;
     font-style: italic;
@@ -161,28 +158,27 @@ header h1 {
     margin: 0;
     font-size: 1.1rem;
     color: #ffffff;
-    opacity: 1;            /* Subimos la opacidad para que se vea más fuerte */
-    /* --- AQUÍ PONEMOS LA NEGRITA --- */
+    opacity: 1;            
     font-weight: bold;     
-    text-transform: none;  /* Asegura que se mantenga en minúsculas */
+    text-transform: none;  
 }
-/* --- Ajustes para CELULARES (Logo redondo y pequeño) --- */
+
 @media (max-width: 600px) {
     .header-content {
-        flex-direction: column; /* Logo arriba, letras abajo */
-        gap: 5px;               /* Muy poco espacio entre logo y letras */
+        flex-direction: column; 
+        gap: 5px;               
     }
 
     .logo-img {
-        /* Reducimos el tamaño (30% menos que antes) */
+      
         height: 55px; 
-        width: 55px;            /* Definimos ancho igual al alto para que sea círculo */
+        width: 55px;            
         
-        /* Lo hacemos totalmente redondo */
+        
         border-radius: 50%;     
-        object-fit: cover;      /* Asegura que la imagen llene el círculo sin estirarse */
+        object-fit: cover;      
         
-        border: 2px solid #2ecc71; /* Opcional: un borde verde para que resalte */
+        border: 2px solid #2ecc71; 
         margin-bottom: 2px;
     }
 
@@ -193,7 +189,6 @@ header h1 {
 
     .slogan {
         font-size: 1.1rem;
-        /* Seguimos pegando el slogan al título y alejándolo de abajo */
         margin: -5px 0 10px 0; 
     }
 
@@ -202,4 +197,5 @@ header h1 {
         font-weight: bold;
     }
 }
+
 
