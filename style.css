@@ -91,7 +91,7 @@ input, select {
     margin-bottom: 25px;
 }
 
-.monto-inicial { font-size: 1.6rem; font-weight: 900; color: #0f172a; }
+.monto-inicial { font-size: 1rem; font-weight: 900; color: #0f172a; }
 .monto-cuotas { font-size: 1rem; color: var(--text-main); margin: 5px 0; }
 .contado-secundario { font-size: 0.85rem; color: var(--contado-color); font-weight: 600; border-top: 1px dashed #cbd5e1; padding-top: 10px; margin-top: 10px; }
 
@@ -117,7 +117,7 @@ header {
 
 .header-content {
     display: flex;
-    align-items: center;      
+    align-items: center;       
     justify-content: center;   
     gap: 30px;                 
     max-width: 1100px;
@@ -135,68 +135,77 @@ header {
 .header-texts {
     display: flex;
     flex-direction: column;
-    align-items: center;   
+    align-items: center;    
     text-align: center;
 }
 
+/* --- CONFIGURACIÓN PARA PC --- */
+
 header h1 {
     margin: 0;
+    padding: 0;
     font-size: 2.2rem;
-    line-height: 1;
-    color: #2ecc71; 
-    font-weight: 800; 
+    line-height: 1.1; /* Controla el espacio natural del título */
+    color: #2ecc71;
+    font-weight: 800;
 }
 
 .slogan {
-    margin: -3px 0 15px 0; 
-    font-size: 1.4rem;
+    /* ESTO SUBE EL SLOGAN HACIA EL TÍTULO VERDE */
+    margin-top: -10px !important; 
+    margin-bottom: 0px;
+    font-size: 1rem;
     font-style: italic;
-    opacity: 0.9;
+    color: white;
 }
 
 .tipo-programas {
-    margin: 0;
+    /* ESTO SUBE LA FRASE HACIA EL SLOGAN */
+    margin-top: 1px !important; 
+    margin-bottom: 5px;
     font-size: 1.1rem;
+    font-weight: bold;
     color: #ffffff;
-    opacity: 1;            
-    font-weight: bold;     
-    text-transform: none;  
+}   
+
+/* --- REDUCCIÓN DE CUOTAS (Probamos varios nombres de clase) --- */
+.valor{ 
+    font-size: 20rem !important; /* Aquí bajamos el tamaño un 20% más */
+    font-weight: bold;
+    color: #333;
 }
 
-/* --- Ajustes para CELULARES --- */
+/* --- AJUSTES PARA CELULAR --- */
 @media (max-width: 600px) {
     .header-content {
         flex-direction: column;
-        gap: 5px;
+        gap: 0px;
     }
 
     .logo-img {
-        height: 55px; 
-        width: 55px;
-        border-radius: 50%;     
+        height: 50px; 
+        width: 50px;
+        border-radius: 50%;
         object-fit: cover;
-        border: 2px solid #2ecc71;
     }
 
     header h1 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     .slogan {
+        /* Sube mucho el slogan en el celular */
+        margin-top: -12px !important;
         font-size: 1.1rem;
-        /* Cambiamos el 10px por 5px para SUBIR la frase de abajo */
-        margin: -5px 0 5px 0; 
     }
 
     .tipo-programas {
-        font-size: 0.95rem;
-        font-weight: bold;
+        margin-top: -4px !important;
+        font-size: 0.9rem;
     }
 
-    /* --- REDUCIR CUOTAS INICIALES 20% --- */
-    .cuota-inicial, .precio { 
-        font-size: 0.8rem !important; /* Ajusta el nombre de la clase según uses en tu HTML */
-        opacity: 0.9;
+    .cuota-inicial, .cuota, .precio, .valor-cuota {
+        font-size: 0.65rem !important;
     }
 }
 
